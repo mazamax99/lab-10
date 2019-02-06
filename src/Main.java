@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Main {
     public static void expZero(){
         int x=100;
@@ -34,12 +36,30 @@ public class Main {
             throw new Exception("Unknown ERROR");
         }
     }
+    static class  MyException  extends  Exception  {
+        private  int  id ;
+        Date time=new Date();
+        MyException ( int  а ) {
+            id = а;}
+            public String toString(){
+                return id +"- OverSize "+time;
+            }
+        }
+        public static  void  compute ( int a)   throws  MyException {
+            System.out.println("Bызвaн  метод  compute { " + a + " ) ");
+            if (a > 10)
+                throw new MyException(a);
+            System.out.println("Hopмaльнoe  завершение ");
+        }
+
    public static void main(String args[])throws Exception{
        //expZero();
         //expIndex();
        //expDesc();
-       expCatches(20);
+       //expCatches(20);
+       compute(9);
        }
     }
-// 1)Пример необрабатываемых исключений 2)Вывод описания исключения(любые исключения,кроме тех,которые из первых)
+// 1)Пример необрабатываемых исключений 2)Вывод описания исключения(любые исключения,кроме тех,которые из первых) 264 стр.
 // 3)Несколько catch(int0-5,float5-10,string10-15,все исключения(по нитервалам))
+// 4)Собственный подкласс исключений и передавать сообщение какой то int дентификатор, сообщение ошибки и дата время
