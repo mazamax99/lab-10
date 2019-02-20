@@ -1,0 +1,9 @@
+# dirs
+[Bb]uild*
+!BuildEssential
+
+# settings
+out/
+
+# other
+.directory

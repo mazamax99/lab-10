@@ -1,4 +1,4 @@
-import java.util.Date;
+﻿import java.util.Date;
 
 public class Main {
     //1
@@ -57,10 +57,10 @@ public class Main {
         }
 
    public static void main(String args[])throws Exception{
-       //expZero();
-        //expIndex();
-       //expDesc();
-       //expCatches(20);
+       expZero();
+        expIndex();
+       expDesc();
+       expCatches(20);
        compute(12);
        }
     }
