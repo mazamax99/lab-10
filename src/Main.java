@@ -1,6 +1,7 @@
 import java.util.Date;
 
 public class Main {
+    //1
     public static void expZero(){
         int x=100;
         int a=x/0;
@@ -9,6 +10,7 @@ public class Main {
         int c[]={1,2,3};
         int a=c[4];
     }
+    //2
     public static void expDesc(){
         try{
             int c[]=new int[-1];
@@ -18,6 +20,7 @@ public class Main {
             System.out.println("Описание "+e+" (массив отрицательного размера)");
         }
     }
+    //3
     public static void expCatches(int a) throws Exception {
         if(a>=0&&a<5) {
             String first=" "+a;
@@ -36,6 +39,7 @@ public class Main {
             throw new Exception("Unknown ERROR");
         }
     }
+    //4
     static class  MyException  extends  Exception  {
         private  int  id ;
         Date time=new Date();
@@ -57,7 +61,7 @@ public class Main {
         //expIndex();
        //expDesc();
        //expCatches(20);
-       compute(9);
+       compute(12);
        }
     }
 // 1)Пример необрабатываемых исключений 2)Вывод описания исключения(любые исключения,кроме тех,которые из первых) 264 стр.
